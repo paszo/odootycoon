@@ -1,19 +1,18 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-    <!--
-    <record model="ir.ui.view" id="odootycoon.list">
-      <field name="name">odootycoon list</field>
-      <field name="model">odootycoon.odootycoon</field>
+
+    <record model="ir.ui.view" id="odootycoon.gamemanagerlist">
+      <field name="name">Odoo Tycoon Game Manager List</field>
+      <field name="model">odootycoon.gamemanager</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+          <field name="cash"/>
+          <field name="day"/>
         </tree>
       </field>
     </record>
-    -->
 
     <!-- actions opening views on models -->
 
