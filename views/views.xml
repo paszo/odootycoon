@@ -14,6 +14,22 @@
       </field>
     </record>
 
+    <!-- explicit form view definition -->
+
+    <record model="ir.ui.view" id="odootycoon.gamemanagerform">
+      <field name="name">Odoo Tycoon Game Manager List</field>
+      <field name="model">odootycoon.gamemanager</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="name"/>
+            <field name="cash"/>
+            <field name="day"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="odootycoon.action_window">
