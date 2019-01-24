@@ -17,10 +17,13 @@
     <!-- explicit form view definition -->
 
     <record model="ir.ui.view" id="odootycoon.gamemanagerform">
-      <field name="name">Odoo Tycoon Game Manager List</field>
+      <field name="name">Odoo Tycoon Game Manager Form</field>
       <field name="model">odootycoon.gamemanager</field>
       <field name="arch" type="xml">
         <form>
+          <header>
+            <button name="nextday" string="Next Day" type="object"/>
+          </header>
           <group>
             <field name="name"/>
             <field name="cash"/>
