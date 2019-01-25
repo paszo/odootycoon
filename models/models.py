@@ -6,7 +6,7 @@ class odootycoon_gamemanager(models.Model):
     _name = 'odootycoon.gamemanager'
     name = fields.Char("Game Name", default="New Game")
     day = fields.Integer("Current Day", default=1)
-    cash = fields.Float("Cash", default=5000)
+    cash = fields.Float("Cash", default=1000)
 
     def nextday(self):
         # Easy way ... bu two to the Postgres server
@@ -25,3 +25,6 @@ class odootycoon_gamemanager(models.Model):
         for i in range(0,30):
             print(i)
             self.nextday()
+
+    def resetgame(self):
+        self.write({'day': 1, 'cash': 1000})
