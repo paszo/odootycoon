@@ -15,3 +15,13 @@ class odootycoon_gamemanager(models.Model):
 
         # This is the efficeint way
         self.write({'day': self.day + 1, 'cash': self.cash - 100})
+
+    def skip5days(self):
+        for i in range(0,5):
+            print(i)
+            self.nextday()
+
+    def skip30days(self):
+        for i in range(0,30):
+            print(i)
+            self.nextday()

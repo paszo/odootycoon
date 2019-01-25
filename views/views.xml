@@ -23,6 +23,8 @@
         <form>
           <header>
             <button name="nextday" string="Next Day" type="object"/>
+            <button name="skip5days" string="Skip 5 Days" type="object"/>
+            <button name="skip30days" string="Skip 30 Days" type="object"/>
           </header>
           <group>
             <field name="name"/>
