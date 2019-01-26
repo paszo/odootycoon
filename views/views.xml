@@ -12,8 +12,8 @@
           <page string="Odoo Tycoon">
             <group>
               <field name="unlockcost"/>
-              <field name="unlocked"/>
-              <button name="unlockproduct" string="Unlock Product" type="object"/>
+              <field name="unlocked" attrs="{'invisible': [('unlocked', '=', False)]}"/>
+              <button name="unlockproduct" string="Unlock Product" type="object" attrs="{'invisible': [('unlocked', '=', True)]}"/>
             </group>
           </page>
 

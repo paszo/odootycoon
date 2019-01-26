@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api
 from odoo.exceptions import Warning
+from random import randint
 
 class odootycoon_producttemplate(models.Model):
     _name = 'product.template'
@@ -34,7 +35,9 @@ class odootycoon_gamemanager(models.Model):
         products = self.env['product.template'].search([('unlocked', '=', True)])
         cash = 0
         for product in products:
-            cash += product.list_price *10
+            numsold = randint(5,25)
+            print(numsold)
+            cash += product.list_price * numsold
 
 
 
