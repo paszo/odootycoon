@@ -38,11 +38,18 @@
 
     <!-- actions opening views on models -->
 
-    <record model="ir.actions.act_window" id="odootycoon.action_window">
+    <record model="ir.actions.act_window" id="odootycoon.action_gamemanager">
       <field name="name">Odoo Tycoon Game Manager</field>
       <field name="res_model">odootycoon.gamemanager</field>
       <field name="view_mode">tree,form</field>
     </record>
+
+    <record model="ir.actions.act_window" id="odootycoon.action_products">
+      <field name="name">Odoo Tycoon Products</field>
+      <field name="res_model">product.template</field>
+      <field name="view_mode">kanban,tree,form</field>
+    </record>
+
 
 
     <!-- server action to the one above -->
@@ -73,7 +80,10 @@
     <!-- actions -->
 
     <menuitem name="Game Manager" id="odootycoon.menu_1_gamemanager" parent="odootycoon.menu_1"
-              action="odootycoon.action_window"/>
+              action="odootycoon.action_gamemanager"/>
+
+    <menuitem name="Products" id="odootycoon.menu_1_products" parent="odootycoon.menu_1"
+                        action="odootycoon.action_products"/>
 
   </data>
 </odoo>
