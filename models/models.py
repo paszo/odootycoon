@@ -1,12 +1,24 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import Warning
 
 class odootycoon_producttemplate(models.Model):
     _name = 'product.template'
     _inherit = 'product.template'
     unlockcost = fields.Float('Unlock Cost', default=750)
     unlocked = fields.Boolean('Unlocked', default=False)
+
+    def unlockproduct(self):
+        # record id = 6 is the one we have active in the database
+        # this is a bad code - need to be upgraded
+        gamemanager = self.env['odootycoon.gamemanager'].search([('id', '=', 6)])
+        if gamemanager.cash >= self.unlockcost:
+            self.unlocked = True
+            gamemanager.cash -= self.unlockcost
+        else:
+            raise Warning("You do not have enough money to unlock the %s product!" % self.name)
+
 
 
 
